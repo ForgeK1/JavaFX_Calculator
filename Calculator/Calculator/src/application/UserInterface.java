@@ -3,25 +3,30 @@ package application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 
+//Description: A class that builds and provides a user interface in the form of panes and scenes
 public class UserInterface 
 {
 	//Private Variables
 	
-	StackPane rootPane;
-	Scene rootScene;
-	Operations operations;
-	SoundManager soundManager;
+	StackPane rootPane; 		//A root pane where all other panes will stack on top of
+	Scene rootScene;			//A root scene that will be used by the stage manager
+	SoundManager soundManager;  //A variable to utilize and manage audio files
 	
 	//Constructors
 	
-	public UserInterface(Operations operations, SoundManager soundManager)
+	/*Creates an instance of a user interface
+	  	Note: 
+	  		  (1) An instance of Operations was not created because that is a static class
+	  		  (2) rootPane and rootScene are instantiated in the setUpScene() method which
+	  		  	  is called in the StageManager class*/
+	public UserInterface(SoundManager soundManager)
 	{
-		this.operations = operations;
 		this.soundManager = soundManager;
 	}
 	
 	//Methods
 	
+	//A method to set up the root scene that will showcase the application's user interface
 	public void setUpScene()
 	{
 		//Creates the root pane where all the other panes will stack onto
@@ -38,6 +43,7 @@ public class UserInterface
 		this.rootScene = new Scene(rootPane, 295, 639);
 	}
 	
+	//A method to handle user events that dynamically update the user interface
 	public void eventHandler()
 	{
 		

@@ -2,10 +2,8 @@ package application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 
-
+//Description: A class that manages the startup and status of the application
 public class StageManager extends Application 
 {
 	/*A method called automatically after launch() is invoked from the main() method below, 
@@ -18,16 +16,13 @@ public class StageManager extends Application
 		{
 			/*--Initializes variables to help set up the application--*/
 			
-			//Creates an instance of operations to help conduct mathematical calculations
-			Operations operations = new Operations();
-			
 			//Creates an instance of sound manager to manage sound effects for the application
 			SoundManager sm = new SoundManager();
 			
 			//Creates an instance of user interface to set up the root pane and scene for the stage manager
-			UserInterface ui = new UserInterface(operations, sm);
+			UserInterface ui = new UserInterface(sm);
 			
-			/*--Utilizes the ui class to set up our scene and to check for any user events--*/
+			/*--Utilizes the UI class to set up our scene and to check for any user events--*/
 			
 			ui.setUpScene();
 			ui.eventHandler();
