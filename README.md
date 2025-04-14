@@ -1,2 +1,2 @@
 # JavaFX_Calculator
-Hey there! This is a project I am working on to get familiar with JavaFX again and how it works.
+🧮 A simple calculator built with JavaFX — created to refresh my skills in building interactive desktop applications using Java! 🚀
